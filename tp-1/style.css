@@ -1,0 +1,15 @@
+section {
+    width: 100%;
+  }
+  html {
+    background-color: whitesmoke;
+  }
+  
+  a:hover {
+    color: red;
+  }
+  
+  article {
+    padding: 20px;
+    display: inline-block;
+  }

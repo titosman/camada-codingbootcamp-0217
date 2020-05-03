@@ -1,11 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <head></head>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>NucbersCinema</title>
+  </head>
+  <body>
+    <header>
+      <h1>NucbersCinema</h1>
+      <nav>
+        <a href="#"> Home</a>
+        <a href="#"> Nosotros</a>
+        <a href="#"> Precios</a>
+      </nav>
+      <section>
+        <h2>Busca tu pelicula</h2>
+        <article>
+          <h3>Por Año</h3>
+          <label for=""> <input type="radio" name="year" id="" />2016 </label>
+          <label for=""> <input type="radio" name="year" id="" />2017 </label>
+          <label for=""> <input type="radio" name="year" id="" />2018 </label>
+          <label for=""> <input type="radio" name="year" id="" />2019 </label>
+        </article>
+        <article>
+          <h3 style="color: blue;">Por Nombre</h3>
+          <label for="">
+            <input type="text" placeholder="busqueda..." name="name" id="" />
+          </label>
+        </article>
+        <article>
+          <h3>Por Genero</h3>
+
+          <select name="" id="miGenero">
+            <option value="1">...</option>
+            <option value="2">Acción</option>
+            <option value="3">Drama</option>
+            <option value="4">Comedia</option>
+            <option value="5">Terror</option>
+            <option value="6">Ciencia Ficcion</option>
+          </select>
+        </article>
+      </section>
+      <section>
+        <h2>Agregadas Recientemente</h2>
+        <article>
+          <h3>Infinity War</h3>
+          <a href=""><img src="./img/inwar.jpg" width="180" height="270" /> </a>
+          <ul>
+            <li>Año: 2018</li>
+            <li>Genero: Accion</li>
+            <li>IMBD: 10.0 estrellas</li>
+          </ul>
+        </article>
+        <article>
+          <h3>AntMan</h3>
+          <a href=""
+            ><img src="./img/descarga.jpg" width="180" height="270" />
+          </a>
+          <ul>
+            <li>Año: 2017</li>
+            <li>Genero: Accion</li>
+            <li>IMBD: 8.0 estrellas</li>
+          </ul>
+        </article>
+        <article>
+          <h3>DeadPool 2</h3>
+          <a href=""
+            ><img src="./img/deadpool2.jpg" width="180" height="270" />
+          </a>
+          <ul>
+            <li>Año: 2019</li>
+            <li>Genero: Accion</li>
+            <li>IMBD: 25.0 estrellas</li>
+          </ul>
+        </article>
+      </section>
+    </header>
+  </body>
 </html>
