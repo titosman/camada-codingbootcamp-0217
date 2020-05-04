@@ -8,14 +8,21 @@
   </head>
   <body>
     <header>
-      <h1>NucbersCinema</h1>
+      <div class="logo">
+        <a href="#"> <img src="./img/logo.png" /> </a>
+      </div>
       <nav>
-        <a href="#"> Home</a>
-        <a href="#"> Nosotros</a>
-        <a href="#"> Precios</a>
+        <ul class="navbar">
+          <li><a href="">HOME</a></li>
+          <li><a href="">NOSOTROS</a></li>
+          <li><a href="">BLOG</a></li>
+          <li><a href="">COMUNIDAD</a></li>
+        </ul>
       </nav>
+    </header>
+    <main class="main">
       <section>
-        <h2>Busca tu pelicula</h2>
+        <h3>Busca tu pelicula</h3>
         <article>
           <h3>Por Año</h3>
           <label for=""> <input type="radio" name="year" id="" />2016 </label>
@@ -24,15 +31,14 @@
           <label for=""> <input type="radio" name="year" id="" />2019 </label>
         </article>
         <article>
-          <h3 style="color: blue;">Por Nombre</h3>
+          <h3>Por Nombre</h3>
           <label for="">
             <input type="text" placeholder="busqueda..." name="name" id="" />
           </label>
         </article>
         <article>
           <h3>Por Genero</h3>
-
-          <select name="" id="miGenero">
+          <select name="">
             <option value="1">...</option>
             <option value="2">Acción</option>
             <option value="3">Drama</option>
@@ -43,7 +49,7 @@
         </article>
       </section>
       <section>
-        <h2>Agregadas Recientemente</h2>
+        <h3>Agregadas Recientemente</h3>
         <article>
           <h3>Infinity War</h3>
           <a href=""><img src="./img/inwar.jpg" width="180" height="270" /> </a>
@@ -76,6 +82,6 @@
           </ul>
         </article>
       </section>
-    </header>
+    </main>
   </body>
 </html>

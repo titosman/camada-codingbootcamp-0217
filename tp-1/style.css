@@ -1,15 +1,94 @@
-section {
-    width: 100%;
-  }
-  html {
-    background-color: whitesmoke;
-  }
-  
-  a:hover {
-    color: red;
-  }
-  
-  article {
-    padding: 20px;
-    display: inline-block;
-  }
+@import url("https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900");
+
+:root {
+  --maincolor: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 !important;
+  background: blue;
+}
+
+.logo a {
+  max-width: 1200px;
+  border: 2px solid black;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo img {
+  height: 150px;
+  width: 130px;
+  padding: 10px 0px;
+}
+
+.navbar {
+  font-family: "Orbitron";
+  max-width: 1200px;
+  height: 200;
+  font-size: 20px;
+  border: 2px solid black;
+  margin: -10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.navbar li a {
+  display: block;
+  color: var(--maincolor);
+  text-decoration: none;
+  padding: 10px 80px;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.4s;
+  background-position-x: center;
+}
+
+.navbar li a:hover,
+.navbar li a:focus {
+  background-size: 70% 2px;
+  background-position-x: center;
+}
+
+.main {
+  max-width: 1200px;
+  height: auto;
+  border: 2px solid black;
+  margin: 10px auto;
+}
+
+.main section {
+  color: white;
+  margin: 20px 10px;
+}
+
+.main section h3 {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Orbitron";
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.main article {
+  color: white;
+ padding: 90px;
+  display: inline-block;
+}
+
+.main section article label {
+  padding: 5px;
+}
