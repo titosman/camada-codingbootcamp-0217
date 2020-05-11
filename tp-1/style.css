@@ -1,3 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html {
+  box-sizing: border-box;
+}
+::before,
+::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: rgb(207, 182, 200);
+  background: radial-gradient(
+    circle,
+    rgba(207, 182, 200, 1) 17%,
+    rgba(220, 177, 208, 1) 41%,
+    rgba(189, 181, 219, 1) 82%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  animation-name: logoanim;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+@keyframes logoanim {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.botones {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80px;
+  height: 80px;
+  animation-name: botonsanim;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+}
+
+@keyframes botonsanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 1s ease-in-out;
+}
+
+a:hover {
+  /* background: rgba(189,181,219,0.4); */
+  transform: scale(1.2);
+}
+
+.slider-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.slider-nav li {
+  flex: 1;
+  display: flex;
+}
+
+.slider-nav a {
+  padding: 20px 5px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.slider-nav span {
+  display: block;
+  flex: 2;
+  text-align: center;
+}
+/* 
+
+
 @import url("https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900");
 
 :root {
@@ -12,7 +121,8 @@
 
 body {
   margin: 0 !important;
-  background: blue;
+  background: rgb(207,182,200);
+background: radial-gradient(circle, rgba(207,182,200,1) 17%, rgba(220,177,208,1) 41%, rgba(189,181,219,1) 82%, rgba(148,187,233,1) 100%);
 }
 
 .logo a {
@@ -20,14 +130,15 @@ body {
   border: 2px solid black;
   margin: 10px auto;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
 }
 
 .logo img {
-  height: 150px;
-  width: 130px;
-  padding: 10px 0px;
+  height: 240px;
+  width: 240px;
+  padding: 10px 10px;
+  
 }
 
 .navbar {
@@ -91,4 +202,4 @@ body {
 
 .main section article label {
   padding: 5px;
-}
+} */
