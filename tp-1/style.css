@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -7,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Reenie Beanie", cursive;
   margin: 0;
   background: rgb(207, 182, 200);
   background: radial-gradient(
@@ -18,32 +19,51 @@ body {
     rgba(148, 187, 233, 1) 100%
   );
 }
-.wrapper {
+.wrapper1 {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px;
-}
-.logo {
-  display: block;
-  margin: 0 auto;
-  width: 250px;
-  height: 250px;
-  animation-name: logoanim;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
+  padding: 20px;
 }
 
-@keyframes logoanim {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.wrapper2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 200px;
+}
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 15px;
+  width: 250px;
+  height: 250px;
+  animation-name: logoanim1, logoanim2;
+  animation-duration: 10s, 8s;
+  animation-iteration-count: 1, 1;
+  animation-fill-mode: backwards, backwards;
+  animation-delay: 0s, 5s;
+  z-index: -1;
+}
+
+.pincel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 15px;
+  width: 200px;
+  height: 100px;
+  animation-name: pincelanim, pincelanim2;
+  animation-duration: 4s, 1s;
+  animation-iteration-count: 1, 1;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 0s, 4s;
+  z-index: 1;
 }
 
 .botones {
@@ -56,23 +76,19 @@ body {
   animation-duration: 5s;
   animation-iteration-count: 1;
   animation-fill-mode: backwards;
-  animation-delay: 0s;
-}
-
-@keyframes botonsanim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-delay: 10s;
 }
 
 a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  transition: all 1s ease-in-out;
+  font-size: 35px;
+  text-shadow: 0px 0px 0px rgb(0, 0, 0), 2px 2px 2px rgb(0, 0, 0);
+  animation-name: botonsanim;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay: 10s;
 }
 
 a:hover {
@@ -104,6 +120,99 @@ a:hover {
   flex: 2;
   text-align: center;
 }
+
+@keyframes logoanim1 {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+    width: 600px;
+    height: 600px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(150px);
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@keyframes logoanim2 {
+  from {
+    transform: translateY(200px);
+    width: 600px;
+    height: 600px;
+  }
+  to {
+    transform: translateY(0px);
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@keyframes pincelanim {
+  0% {
+    left: -200px;
+    top: 200px;
+  }
+  16% {
+    left: 550px;
+    top: 250px;
+  }
+  32% {
+    left: -200px;
+    top: 350px;
+  }
+  48% {
+    left: 550px;
+    top: 450px;
+  }
+  64% {
+    left: -200px;
+    top: 550px;
+  }
+
+  80% {
+    left: 550px;
+    top: 650px;
+  }
+
+  100% {
+    left: -200;
+    top: 750px;
+  }
+}
+
+@keyframes pincelanim2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
+
+@keyframes botonsanim {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* 
 
 
