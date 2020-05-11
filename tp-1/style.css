@@ -3,13 +3,14 @@
 html {
   box-sizing: border-box;
 }
-::before,
-::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 body {
   font-family: "Reenie Beanie", cursive;
-  margin: 0;
+  margin: 0 !important;
   background: rgb(207, 182, 200);
   background: radial-gradient(
     circle,
@@ -19,23 +20,22 @@ body {
     rgba(148, 187, 233, 1) 100%
   );
 }
-.wrapper1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+
+p {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
-.wrapper2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 200px;
+h2 {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0px 0px 0px rgb(0, 0, 0), 2px 2px 2px rgb(0, 0, 0);
 }
+
 .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: flex;
   margin: 0 auto;
   padding: 15px;
   width: 250px;
@@ -67,22 +67,19 @@ body {
 }
 
 .botones {
-  display: block;
-  margin: 0 auto;
-  padding: 20px;
-  width: 80px;
-  height: 80px;
-  animation-name: botonsanim;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: backwards;
-  animation-delay: 10s;
+  display: inline-block;
+  padding: 0px 5px;
+  width: 75%;
 }
 
 a {
   color: white;
-  text-decoration: none;
   font-size: 35px;
+  text-decoration: none;
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
   text-shadow: 0px 0px 0px rgb(0, 0, 0), 2px 2px 2px rgb(0, 0, 0);
   animation-name: botonsanim;
   animation-duration: 5s;
@@ -95,208 +92,322 @@ a:hover {
   transform: scale(1.2);
 }
 
-.slider-nav ul {
+.toggle {
+  display: none;
+  animation-name: toganim;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay: 10s;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.navegacion ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-
-.slider-nav li {
+.navegacion li {
   flex: 1;
-  display: flex;
 }
 
-.slider-nav a {
-  padding: 20px 5px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.slider-nav span {
-  display: block;
-  flex: 2;
+section {
+  max-width: 1200px;
   text-align: center;
+  font-size: 35px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 10px;
+  margin: 5px 0px;
+  font-weight: 100;
+  animation-name: sectanim;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay: 10s;
 }
 
-@keyframes logoanim1 {
-  from {
-    opacity: 0;
-    transform: translateY(150px);
-    width: 600px;
-    height: 600px;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(150px);
-    width: 600px;
-    height: 600px;
-  }
-}
-
-@keyframes logoanim2 {
-  from {
-    transform: translateY(200px);
-    width: 600px;
-    height: 600px;
-  }
-  to {
-    transform: translateY(0px);
-    width: 250px;
-    height: 250px;
-  }
-}
-
-@keyframes pincelanim {
-  0% {
-    left: -200px;
-    top: 200px;
-  }
-  16% {
-    left: 550px;
-    top: 250px;
-  }
-  32% {
-    left: -200px;
-    top: 350px;
-  }
-  48% {
-    left: 550px;
-    top: 450px;
-  }
-  64% {
-    left: -200px;
-    top: 550px;
-  }
-
-  80% {
-    left: 550px;
-    top: 650px;
-  }
-
-  100% {
-    left: -200;
-    top: 750px;
-  }
-}
-
-@keyframes pincelanim2 {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes botonsanim {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* 
-
-
-@import url("https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900");
-
-:root {
-  --maincolor: rgb(255, 255, 255);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0 !important;
-  background: rgb(207,182,200);
-background: radial-gradient(circle, rgba(207,182,200,1) 17%, rgba(220,177,208,1) 41%, rgba(189,181,219,1) 82%, rgba(148,187,233,1) 100%);
-}
-
-.logo a {
-  max-width: 1200px;
-  border: 2px solid black;
-  margin: 10px auto;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-}
-
-.logo img {
-  height: 240px;
-  width: 240px;
-  padding: 10px 10px;
-  
-}
-
-.navbar {
-  font-family: "Orbitron";
-  max-width: 1200px;
-  height: 200;
+footer {
+  text-align: center;
   font-size: 20px;
-  border: 2px solid black;
-  margin: -10px auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  list-style: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 10px;
+  margin: 5px 0px;
+  font-weight: 100;
 }
 
-.navbar li a {
-  display: block;
-  color: var(--maincolor);
-  text-decoration: none;
-  padding: 10px 80px;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size 0.4s;
-  background-position-x: center;
-}
-
-.navbar li a:hover,
-.navbar li a:focus {
-  background-size: 70% 2px;
-  background-position-x: center;
-}
-
-.main {
+.items {
   max-width: 1200px;
-  height: auto;
-  border: 2px solid black;
-  margin: 10px auto;
-}
-
-.main section {
-  color: white;
-  margin: 20px 10px;
-}
-
-.main section h3 {
-  text-align: center;
-  font-size: 25px;
-  font-family: "Orbitron";
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.main article {
-  color: white;
- padding: 90px;
-  display: inline-block;
-}
-
-.main section article label {
   padding: 5px;
-} */
+  margin: 5px 0px;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  max-width: 1200px;
+  flex: 1 1 33%;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  padding: 5px;
+}
+
+@media all and (min-width: 610px) {
+  .botones {
+    animation-name: botonsanim;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 10s;
+  }
+
+  @keyframes logoanim1 {
+    from {
+      opacity: 0;
+      transform: translateY(150px);
+      width: 600px;
+      height: 600px;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(150px);
+      width: 600px;
+      height: 600px;
+    }
+  }
+
+  @keyframes logoanim2 {
+    from {
+      transform: translateY(200px);
+      width: 600px;
+      height: 600px;
+    }
+    to {
+      transform: translateY(0px);
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  @keyframes pincelanim {
+    0% {
+      left: -200px;
+      top: 200px;
+    }
+    16% {
+      left: 550px;
+      top: 250px;
+    }
+    32% {
+      left: -200px;
+      top: 350px;
+    }
+    48% {
+      left: 550px;
+      top: 450px;
+    }
+    64% {
+      left: -200px;
+      top: 550px;
+    }
+
+    80% {
+      left: 550px;
+      top: 650px;
+    }
+
+    100% {
+      left: -200;
+      top: 750px;
+    }
+  }
+
+  @keyframes pincelanim2 {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes botonsanim {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes sectanim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+@media all and (max-width: 600px) {
+  .navegacion ul {
+    display: none;
+  }
+
+  .navegacion ul.open {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .navegacion li {
+    flex: 1 1 33%;
+  }
+
+  a {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .logo {
+    padding: 5px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .toggle {
+    padding: 5px;
+  }
+
+  .items {
+    flex-wrap: wrap;
+  }
+
+  .item {
+    flex: 1 1 50%;
+    align-self: stretch;
+    margin: 10 30%;
+  }
+
+  .signup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signup input {
+    margin: 5px;
+  }
+
+  section {
+    animation-name: sectanim;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 10s;
+  }
+
+  @keyframes logoanim1 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes logoanim2 {
+    from {
+      transform: translateY(85px);
+      width: 100%;
+      height: 100%;
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes pincelanim {
+    0% {
+      left: -100px;
+      top: 70px;
+    }
+    16% {
+      left: 250px;
+      top: 100px;
+    }
+    32% {
+      left: -100px;
+      top: 150px;
+    }
+    48% {
+      left: 250px;
+      top: 200px;
+    }
+    64% {
+      left: -100px;
+      top: 250px;
+    }
+
+    80% {
+      left: 250px;
+      top: 300px;
+    }
+
+    100% {
+      left: -100;
+      top: 350px;
+    }
+  }
+
+  @keyframes pincelanim2 {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes toganim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes sectanim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
